@@ -20,7 +20,7 @@
 // Função auxiliar para imprimir cabeçalho do log
 void imprimirCabecalhoLog() {
     printf("=======================================================================\n\n");
-    printf("Inicio da execucao: Simulacao Shopping Center - Distribuicao de Premios\n\n");
+    printf("Inicio da execução: Simulacao Shopping Center - Distribuicao de Premios\n\n");
     printf("Implementacao: Listas, Filas e Pilhas em C\n\n");
     printf("=======================================================================\n\n");
 }
@@ -28,7 +28,7 @@ void imprimirCabecalhoLog() {
 // Função auxiliar para imprimir rodapé do log
 void imprimirRodapeLog() {
     printf("\n\n=======================================================================\n\n");
-    printf("Fim da execucao.\n\n");
+    printf("Fim da execução.\n\n");
     printf("=======================================================================\n\n");
 }
 
