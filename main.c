@@ -200,65 +200,65 @@ int main() {
     printf("*** Fim da Simulação ***\n\n");
     printf("Motivo: Filas ou Pilhas esgotadas.\n\n");
 
-    // --- Testes Exaustivos Adicionais ---
-    printf("\n\n*** Iniciando Testes Exaustivos Adicionais ***\n\n");
+    // // --- Testes Adicionais ---
+    // printf("\n\n*** Iniciando Testes  Adicionais ***\n\n");
 
-    // Teste: Tentar remover de filas vazias
-    printf("\n\nTeste: Remover de Fila 1 (Vazia? %s)...\n\n", filaClientesVazia(&fila1) ? "Sim" : "Nao");
-    char temp_nome[100];
-    if (!desenfileirarCliente(&fila1, temp_nome, sizeof(temp_nome))) {
-        printf("SUCESSO NO TESTE: Impossível remover da Fila 1 (vazia).\n\n");
-    }
-    printf("Teste: Remover de Fila 2 (Vazia? %s)...\n\n", filaClientesVazia(&fila2) ? "Sim" : "Nao");
-    if (!desenfileirarCliente(&fila2, temp_nome, sizeof(temp_nome))) {
-        printf("SUCESSO NO TESTE: Impossível remover da Fila 2 (vazia).\n\n");
-    }
+    // // Teste: Tentar remover de filas vazias
+    // printf("\n\nTeste: Remover de Fila 1 (Vazia? %s)...\n\n", filaClientesVazia(&fila1) ? "Sim" : "Nao");
+    // char temp_nome[100];
+    // if (!desenfileirarCliente(&fila1, temp_nome, sizeof(temp_nome))) {
+    //     printf("SUCESSO NO TESTE: Impossível remover da Fila 1 (vazia).\n\n");
+    // }
+    // printf("Teste: Remover de Fila 2 (Vazia? %s)...\n\n", filaClientesVazia(&fila2) ? "Sim" : "Nao");
+    // if (!desenfileirarCliente(&fila2, temp_nome, sizeof(temp_nome))) {
+    //     printf("SUCESSO NO TESTE: Impossível remover da Fila 2 (vazia).\n\n");
+    // }
 
-    // Teste: Tentar remover de pilhas vazias
-    printf("\n\nTeste: Desempilhar Gibi (Vazia? %s)...\n\n", pilhaPremiosVazia(&pilhaGibis) ? "Sim" : "Nao");
-    char temp_premio[100];
-    if (!desempilharPremio(&pilhaGibis, temp_premio, sizeof(temp_premio))) {
-        printf("SUCESSO NO TESTE: Impossível desempilhar da Pilha de Gibis (vazia).\n\n");
-    }
-     printf("Teste: Desempilhar Ingresso (Vazia? %s)...\n\n", pilhaPremiosVazia(&pilhaIngressos) ? "Sim" : "Nao");
-    if (!desempilharPremio(&pilhaIngressos, temp_premio, sizeof(temp_premio))) {
-        printf("SUCESSO NO TESTE: Impossível desempilhar da Pilha de Ingressos (vazia).\n\n");
-    }
+    // // Teste: Tentar remover de pilhas vazias
+    // printf("\n\nTeste: Desempilhar Gibi (Vazia? %s)...\n\n", pilhaPremiosVazia(&pilhaGibis) ? "Sim" : "Nao");
+    // char temp_premio[100];
+    // if (!desempilharPremio(&pilhaGibis, temp_premio, sizeof(temp_premio))) {
+    //     printf("SUCESSO NO TESTE: Impossível desempilhar da Pilha de Gibis (vazia).\n\n");
+    // }
+    //  printf("Teste: Desempilhar Ingresso (Vazia? %s)...\n\n", pilhaPremiosVazia(&pilhaIngressos) ? "Sim" : "Nao");
+    // if (!desempilharPremio(&pilhaIngressos, temp_premio, sizeof(temp_premio))) {
+    //     printf("SUCESSO NO TESTE: Impossível desempilhar da Pilha de Ingressos (vazia).\n\n");
+    // }
 
-    // Teste: Encher uma fila e tentar inserir mais
-    printf("\n\nTeste: Encher Fila 1 e tentar inserir extra...\n\n");
-    inicializarFilaClientes(&fila1); // Limpa a fila para o teste
-    int i;
-    for (i = 0; i < TAMANHO_MAX_FILA; i++) {
-        char nome_teste[20];
-        sprintf(nome_teste, "Cliente_%d", i + 1);
-        if (!enfileirarCliente(&fila1, nome_teste)) {
-             printf("ERRO INESPERADO: Falha ao enfileirar na fila ainda não cheia!\n\n");
-             break;
-        }
-    }
-    printf("Fila 1 após enchimento:\n\n");
-    imprimirFilaClientes(&fila1, "Fila 1");
-    printf("Tentando inserir 'Cliente Extra' na Fila 1 cheia...\n\n");
-    if (!enfileirarCliente(&fila1, "Cliente Extra")) {
-        printf("SUCESSO NO TESTE: Impossível inserir 'Cliente Extra', Fila 1 cheia!\n\n");
-    }
+    // // Teste: Encher uma fila e tentar inserir mais
+    // printf("\n\nTeste: Encher Fila 1 e tentar inserir extra...\n\n");
+    // inicializarFilaClientes(&fila1); // Limpa a fila para o teste
+    // int i;
+    // for (i = 0; i < TAMANHO_MAX_FILA; i++) {
+    //     char nome_teste[20];
+    //     sprintf(nome_teste, "Cliente_%d", i + 1);
+    //     if (!enfileirarCliente(&fila1, nome_teste)) {
+    //          printf("ERRO INESPERADO: Falha ao enfileirar na fila ainda não cheia!\n\n");
+    //          break;
+    //     }
+    // }
+    // printf("Fila 1 após enchimento:\n\n");
+    // imprimirFilaClientes(&fila1, "Fila 1");
+    // printf("Tentando inserir 'Cliente Extra' na Fila 1 cheia...\n\n");
+    // if (!enfileirarCliente(&fila1, "Cliente Extra")) {
+    //     printf("SUCESSO NO TESTE: Impossível inserir 'Cliente Extra', Fila 1 cheia!\n\n");
+    // }
 
-    // Imprimir lista final de ganhadores
-    printf("\n\n*** Lista Final de Ganhadores ***\n\n");
-    imprimirListaGanhadores(&listaGanhadores);
+    // // Imprimir lista final de ganhadores
+    // printf("\n\n*** Lista Final de Ganhadores ***\n\n");
+    // imprimirListaGanhadores(&listaGanhadores);
 
-    printf("*** Fim dos Testes Exaustivos ***\n\n");
+    // printf("*** Fim dos Testes Exaustivos ***\n\n");
 
-    // --- Liberação de Memória ---
-    printf("\n\n*** Liberando Memória Alocada ***\n\n");
-    liberarListaGanhadores(&listaGanhadores);
-    printf("Memória da Lista de Ganhadores liberada.\n\n");
-    liberarPilhaPremios(&pilhaGibis);
-    printf("Memória da Pilha de Gibis liberada.\n\n");
-    liberarPilhaPremios(&pilhaIngressos);
-    printf("Memória da Pilha de Ingressos liberada.\n\n");
-    printf("*** Fim da Liberação de Memória ***\n\n");
+    // // --- Liberação de Memória ---
+    // printf("\n\n*** Liberando Memória Alocada ***\n\n");
+    // liberarListaGanhadores(&listaGanhadores);
+    // printf("Memória da Lista de Ganhadores liberada.\n\n");
+    // liberarPilhaPremios(&pilhaGibis);
+    // printf("Memória da Pilha de Gibis liberada.\n\n");
+    // liberarPilhaPremios(&pilhaIngressos);
+    // printf("Memória da Pilha de Ingressos liberada.\n\n");
+    // printf("*** Fim da Liberação de Memória ***\n\n");
 
     imprimirRodapeLog();
 
