@@ -1,0 +1,21 @@
+# Arquivos de build
+*.o
+*.out
+*.exe
+
+# Diretórios de build
+/build/
+/bin/
+/obj/
+
+# Arquivos temporários
+*.log
+*.tmp
+
+# Arquivos de backup de editores
+*~
+*.swp
+
+# IDEs
+.vscode/
+.idea/

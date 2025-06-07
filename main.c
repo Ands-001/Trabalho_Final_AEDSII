@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <windows.h>
 
 #include "lista_ganhadores.h"
 #include "fila_clientes.h"
@@ -34,6 +35,7 @@ void imprimirRodapeLog() {
 int main() {
 
     // Configurações iniciais
+    SetConsoleOutputCP(CP_UTF8);
 
 
     // Inicializa o gerador de números aleatórios
