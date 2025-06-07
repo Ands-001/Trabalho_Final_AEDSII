@@ -7,24 +7,14 @@
 
 #include "lista_ganhadores.h"
 
-/**
- * @brief Inicializa a lista de ganhadores.
- * 
- * @param lista Ponteiro para a lista de ganhadores.
- */
+
 void inicializarListaGanhadores(ListaGanhadores *lista) {
     lista->inicio = NULL;
     lista->fim = NULL;
     lista->tamanho = 0;
 }
 
-/**
- * @brief Insere um novo ganhador no final da lista.
- * 
- * @param lista Ponteiro para a lista de ganhadores.
- * @param nome Nome do ganhador a ser inserido.
- * @return int 1 se a inserção foi bem-sucedida, 0 caso contrário (erro de alocação).
- */
+
 int inserirGanhador(ListaGanhadores *lista, const char *nome) {
     // Aloca memória para o novo nó
     NoGanhador *novoNo = (NoGanhador*) malloc(sizeof(NoGanhador));
@@ -54,11 +44,7 @@ int inserirGanhador(ListaGanhadores *lista, const char *nome) {
     return 1; // Sucesso
 }
 
-/**
- * @brief Imprime todos os nomes na lista de ganhadores.
- * 
- * @param lista Ponteiro para a lista de ganhadores.
- */
+
 void imprimirListaGanhadores(ListaGanhadores *lista) {
     printf("--- Lista de Ganhadores (%d) ---\n\n", lista->tamanho);
     if (lista->inicio == NULL) {
@@ -75,11 +61,7 @@ void imprimirListaGanhadores(ListaGanhadores *lista) {
     printf("---------------------------------\n\n");
 }
 
-/**
- * @brief Libera toda a memória alocada para a lista de ganhadores.
- * 
- * @param lista Ponteiro para a lista de ganhadores.
- */
+
 void liberarListaGanhadores(ListaGanhadores *lista) {
     NoGanhador *atual = lista->inicio;
     NoGanhador *proximoNo;

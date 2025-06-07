@@ -7,33 +7,18 @@
 
 #include "pilha_premios.h"
 
-/**
- * @brief Inicializa a pilha de prêmios.
- * 
- * @param pilha Ponteiro para a pilha de prêmios.
- */
+
 void inicializarPilhaPremios(PilhaPremios *pilha) {
     pilha->topo = NULL;
     pilha->tamanho = 0;
 }
 
-/**
- * @brief Verifica se a pilha de prêmios está vazia.
- * 
- * @param pilha Ponteiro para a pilha de prêmios.
- * @return int 1 se vazia, 0 caso contrário.
- */
+
 int pilhaPremiosVazia(PilhaPremios *pilha) {
     return (pilha->topo == NULL);
 }
 
-/**
- * @brief Empilha um novo prêmio (push).
- * 
- * @param pilha Ponteiro para a pilha de prêmios.
- * @param descricao Descrição do prêmio a ser empilhado.
- * @return int 1 se o empilhamento foi bem-sucedido, 0 caso contrário (erro de alocação).
- */
+
 int empilharPremio(PilhaPremios *pilha, const char *descricao) {
     // Aloca memória para o novo nó
     NoPremio *novoNo = (NoPremio*) malloc(sizeof(NoPremio));
@@ -55,14 +40,7 @@ int empilharPremio(PilhaPremios *pilha, const char *descricao) {
     return 1; // Sucesso
 }
 
-/**
- * @brief Desempilha um prêmio (pop) e retorna sua descrição.
- * 
- * @param pilha Ponteiro para a pilha de prêmios.
- * @param descricao_removida Buffer para armazenar a descrição do prêmio removido.
- * @param tamanho_buffer Tamanho do buffer descricao_removida.
- * @return int 1 se o desempilhamento foi bem-sucedido, 0 se a pilha está vazia.
- */
+
 int desempilharPremio(PilhaPremios *pilha, char *descricao_removida, size_t tamanho_buffer) {
     if (pilhaPremiosVazia(pilha)) {
         // printf("ERRO: Pilha vazia! Impossível desempilhar.\n\n");
@@ -86,12 +64,7 @@ int desempilharPremio(PilhaPremios *pilha, char *descricao_removida, size_t tama
     return 1; // Sucesso
 }
 
-/**
- * @brief Imprime os prêmios na pilha.
- * 
- * @param pilha Ponteiro para a pilha de prêmios.
- * @param nome_pilha Nome descritivo da pilha (ex: "Pilha de Gibis").
- */
+
 void imprimirPilhaPremios(PilhaPremios *pilha, const char *nome_pilha) {
     printf("--- %s (%d) ---\n\n", nome_pilha, pilha->tamanho);
     if (pilhaPremiosVazia(pilha)) {
@@ -111,11 +84,7 @@ void imprimirPilhaPremios(PilhaPremios *pilha, const char *nome_pilha) {
     printf("--------------------\n\n");
 }
 
-/**
- * @brief Libera toda a memória alocada para a pilha de prêmios.
- * 
- * @param pilha Ponteiro para a pilha de prêmios.
- */
+
 void liberarPilhaPremios(PilhaPremios *pilha) {
     NoPremio *atual = pilha->topo;
     NoPremio *proximoNo;
