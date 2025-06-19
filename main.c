@@ -1,11 +1,3 @@
-/*************************************************************************
- * Ficheiro: main.c
- * Descrição:
- *   Programa principal para simular a distribuição de prêmios
- *   em um shopping center, utilizando listas, filas e pilhas.
- *   Inclui testes exaustivos das estruturas de dados.
- *************************************************************************/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -75,7 +67,6 @@ int main() {
     int qntUser;
     // int result; // Removido, pois a função lerInteiroPositivo já faz a validação
 
-    // Substituído o do-while pela chamada da função de validação
     qntUser = lerInteiroPositivo("Indique a quantidade de usuários: ");
 
     
@@ -105,7 +96,6 @@ int main() {
     char nomeGibis[100], nomeIngressos[100];
 
     // Entrada da quantidade de gibis
-    // Substituído o do-while pela chamada da função de validação
     qntGibis = lerInteiroPositivo("Indique a quantidade de Gibis: ");
 
     for(int i = 0; i < qntGibis; i++) {
@@ -115,7 +105,6 @@ int main() {
         empilharPremio(&pilhaGibis, nomeGibis);
     }
 
-    // Substituído o do-while pela chamada da função de validação
     qntIngressos = lerInteiroPositivo("Indique a quantidade de Ingressos: ");
 
     for(int i = 0; i < qntIngressos; i++) {
@@ -177,10 +166,6 @@ int main() {
             // Tenta a outra fila se esta estiver vazia
             fila_atual = (fila_escolhida == 0) ? &fila2 : &fila1;
             nome_fila_atual = (fila_escolhida == 0) ? "Fila 2" : "Fila 1";
-            if (!filaClientesVazia(fila_atual)) {
-                 printf("Tentando atender cliente da %s...\n\n", nome_fila_atual);
-                 // Repete a lógica de atendimento para a outra fila...
-            }
         }
 
         // Imprime estado atual das estruturas periodicamente ou a cada passo

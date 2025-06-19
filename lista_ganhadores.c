@@ -1,10 +1,3 @@
-/*************************************************************************
- * Ficheiro: lista_ganhadores.c
- * Descrição:
- *   Implementação das funções para a lista duplamente encadeada
- *   de ganhadores (alocação dinâmica).
- *************************************************************************/
-
 #include "lista_ganhadores.h"
 
 

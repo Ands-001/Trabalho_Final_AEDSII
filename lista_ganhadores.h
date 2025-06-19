@@ -1,10 +1,3 @@
-/*************************************************************************
- * Ficheiro: lista_ganhadores.h
- * Descrição:
- *   Definição da estrutura de dados para a lista duplamente encadeada
- *   de ganhadores (alocação dinâmica) e protótipos das funções.
- *************************************************************************/
-
 #ifndef LISTA_GANHADORES_H
 #define LISTA_GANHADORES_H
 

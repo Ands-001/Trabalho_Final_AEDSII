@@ -1,10 +1,3 @@
-/*************************************************************************
- * Ficheiro: fila_clientes.h
- * Descrição:
- *   Definição da estrutura de dados para a fila de clientes
- *   (alocação estática) e protótipos das funções.
- *************************************************************************/
-
 #ifndef FILA_CLIENTES_H
 #define FILA_CLIENTES_H
 

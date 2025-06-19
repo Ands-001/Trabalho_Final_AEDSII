@@ -1,10 +1,3 @@
-/*************************************************************************
- * Ficheiro: fila_clientes.c
- * Descrição:
- *   Implementação das funções para a fila de clientes
- *   (alocação estática).
- *************************************************************************/
-
 #include "fila_clientes.h"
 #include <stdio.h>
 #include <string.h>
@@ -34,7 +27,7 @@ int enfileirarCliente(FilaClientes *fila, const char *nome) {
 
     // Copia o nome para a posição 'fim' da fila
     strncpy(fila->nomes[fila->fim], nome, sizeof(fila->nomes[0]) - 1);
-    fila->nomes[fila->fim][sizeof(fila->nomes[0]) - 1] = '\0'; // Garante terminação nula
+    fila->nomes[fila->fim][sizeof(fila->nomes[0]) - 1] = '\0'; // garante o fim da string
     
     // Atualiza o índice 'fim' (circular)
     fila->fim = (fila->fim + 1) % TAMANHO_MAX_FILA;
